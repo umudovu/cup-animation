@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 1200px;
+    height: 1000px;
+    position: relative;background: rgb(144,21,227);
+    background: linear-gradient(319deg, rgba(144,21,227,1) 0%, rgba(252,176,69,1) 100%);
+    z-index: -2;
+    overflow: hidden;
+}
+.container::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1000px;
+    position: absolute;
+    right: 0px;
+    top: -60px;
+    transform: skewY(20deg);background: rgb(144,21,227);
+    background: linear-gradient(319deg, rgba(144,21,227,1) 0%, rgba(252,176,69,1) 100%);
+    box-sizing: content-box;
+}
+
+.shadow{
+    width: 1200px;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    transform: skewx(70deg);
+    left: -155px;
+    background: rgb(224,213,230);
+    background: linear-gradient(319deg, rgba(224,213,230,1) 0%, rgba(58,42,20,1) 100%);
+    z-index: -1;
+}
+.left-box{
+    width: 5px;
+    height: 500px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    transform: rotatez(-10deg);
+    border-radius: 10px;
+}
+
+.rigt-box{
+
+    width: 5px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    top: 20px;
+    left: 400px;
+    transform: rotatez(10deg);
+    border-radius: 10px;
+}
+
+.bttm-box{
+    width:270px ;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 512px;
+    left: 92.5px;
+    border-radius: 10px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.box1{
+    position: absolute;
+    top: 410px;
+    left: 100px;
+    background-color: chartreuse;
+    animation-name:box1 ;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    z-index: 2;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box2{
+    position: absolute;
+    top: 410px;
+    left: 200px;
+    background-color: rgb(19, 103, 158);
+    animation-name:box2 ;
+    animation-duration: 4s;
+    animation-delay: 3.8s;
+    z-index: 3;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box3{
+    position: absolute;
+    top: 325px;
+    left: 150px;
+    background-color: rgb(159, 26, 68);
+    animation-name:box3 ;
+    animation-duration: 4s;
+    animation-delay: 3.6s;
+    z-index: 4;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box4{
+    position: absolute;
+    top: 350px;
+    left: 280px;
+    background-color: rgb(211, 116, 16);
+    animation-name:box4 ;
+    animation-duration: 4s;
+    animation-delay: 3.4s;
+    z-index: 5;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box5{
+    position: absolute;
+    top: 274px;
+    left: 65px;
+    background-color: rgb(62, 9, 103);
+    animation-name:box5 ;
+    animation-duration: 4s;
+    animation-delay: 3.2s;
+    z-index: 6;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box6{
+    position: absolute;
+    top: 265px;
+    left: 230px;
+    background-color: rgb(129, 151, 183);
+    animation-name:box6 ;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    z-index: 7;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box7{
+    position: absolute;
+    top: 215px;
+    left: 145px;
+    background-color: rgb(225, 98, 18);
+    animation-name:box7 ;
+    animation-duration: 4s;
+    animation-delay: 2.8s;
+    z-index: 8;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.box8{
+    position: absolute;
+    top: 190px;
+    left: 300px;
+    background-color: rgb(20, 55, 75);
+    animation-name:box8 ;
+    animation-duration: 4s;
+    animation-delay: 2.5s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+
+    z-index: 9;
+}
+
+.in-box{
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    animation-name: in-box ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function:linear;
+}
+
+
+@keyframes in-box{
+    0%{
+        left: 0px;
+        transform: rotateZ(0deg);
+    }
+    100%{
+        left: 350px;
+        transform: rotateZ(150deg);
+    }
+}
+
+
+@keyframes box8{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-595px);
+    }
+}
+@keyframes box7{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-650px);
+    }
+}
+@keyframes box6{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-630px);
+    }
+}
+@keyframes box5{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-750px);
+    }
+}
+@keyframes box4{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-760px);
+    }
+}
+@keyframes box3{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-760px);
+    }
+}
+@keyframes box2{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-770px);
+    }
+}
+@keyframes box1{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-800px);
+    }
+}
